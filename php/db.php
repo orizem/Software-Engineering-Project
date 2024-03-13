@@ -1,4 +1,8 @@
 <?php
+    // Initialize the session
+    session_start();
+
+    // DB data
     $hostname = "sql306.byethost4.com";
     $username = "b4_36113250";
     $password = "6FK4WRGeWLtYc45";

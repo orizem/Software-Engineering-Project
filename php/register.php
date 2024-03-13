@@ -1,6 +1,9 @@
 <?php
     include "db.php";
 
+    // Initialize the session
+    session_start();
+
     // Handle form submission
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $fname = $_POST["fname"];
