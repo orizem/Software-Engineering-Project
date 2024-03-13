@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/delivery.css" />
+    <link rel="stylesheet" href="styles/background_animation.css" />
+    <div class="color-palette">
+        <div id="navbar-container"></div>
+
+        <title>Gourmet Haven</title>
+    </div>
+</head>
+
+<body class="color-palette">
+
+    <ul class="stars" id="stars"></ul>
+    <div class="bg-img bg-img-1">
+        <h1 class="deffect1">הזמנות</h1>
+        <div class="index-div container">
+        </div>
+    </div>
+    <div class="bg-img bg-img-2">
+        <div class="index-div container">
+            <span class="box" style="background-color: rgba(24, 41, 49, 0.4);">
+                <form method="get">
+                <!-- <form action="php/delivery.php" method="get"> -->
+                    <table>
+                        <tr>
+                            <td>סוג ההזמנה:</td>
+                            <td>
+                                <select>
+                                    <option value="order-table">הזמנת שולחן</option>
+                                    <option value="order-delivery">הזמנת משלוח</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <!-- TODO: Check if connected, if so, 
+                            don't ask for name, tel, email... -->
+                        <tr>
+                            <td>שם:</td>
+                            <td><input type="text" name="name"><br></td>
+                        </tr>
+                        <tr>
+                            <td>טלפון:</td>
+                            <td><input type="tel" name="tel"><br></td>
+                        </tr>
+                        <tr>
+                            <td>מייל:</td>
+                            <td><input type="email" name="email"><br><br></td>
+                        </tr>
+                        <tr>
+                            <!-- TODO: If delivery was selected: -->
+                            <td>מה תרצו להזמין?</td>
+                            <td>
+                                <div class="link-list dropdown">
+                                    <span style="padding-top:3%; padding-bottom:3%;">לעיון בתפריט</span>
+                                    <div class="dropdown-content" style="width: 50%;">
+                                        <a href="/menu.html#italian">ספיישלים</a>
+                                        <a href="/menu.html#asian">אסייתי</a>
+                                        <a href="/menu.html#italian">איטלקי</a>
+                                        <a href="/menu.html#sea-food">מאכלי ים</a>
+                                        <a href="/menu.html#burgers">המבורגרים</a>
+                                        <a href="/menu.html#soups">מרקים</a>
+                                        <a href="/menu.html#dessert">קינוחים</a>
+                                        <a href="/menu.html#bevrages">שתיה קלה</a>
+                                        <a href="/menu.html#wine">יין</a>
+                                    </div>
+                                </div>
+
+                                <div>
+
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="submit" value="שלח"></td>
+                        </tr>
+                    </table>
+                </form>
+            </span>
+        </div>
+    </div>
+
+    <footer>
+        <div id="footer-container"></div>
+    </footer>
+</body>
+
+<script src="scripts/pageLoader.js"></script>
+<script src="scripts/loadHeaderFooter.js"></script>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="styles/video.css" />
+  <link rel="stylesheet" href="styles/background_animation.css" />
+  <div class="color-palette">
+    <div id="navbar-container"></div>
+
+    <title>Gourmet Haven</title>
+  </div>
+</head>
+
+<body class="color-palette">
+
+  <ul class="stars" id="stars"></ul>
+  <div class="bg-img bg-img-1">
+    <h1 class="deffect1">Gourmet Haven</h1>
+    <div class="index-div container">
+      <span class="box">
+        ברוכים הבאים לגורה הייבבן,
+        כאן אנו מגישים מנות טעימות וממכרות בטאץ' של מעולות קולינריות.
+        השפים שלנו משתמשים בחומרי
+        גלם משובחים כדי ליצור חווית אכילה שתגרום לכם לחזור לפה פעם נוספת.
+      </span>
+    </div>
+  </div>
+  <div class="bg-img bg-img-2">
+
+    <div id="slideshow-container"></div>
+
+    <div class="index-div container">
+      <span class="box">
+        עיינו בתפריטנו המגוון שמתאים לטעמים והעדפות שונות.
+        ממנות ראשונות ועד קינוחים, יש לנו משהו לכל אחד. בדקו את
+        תפריטנו או בואו לבקר אותנו כדי לחוות את הטעמים בפועל.
+      </span>
+    </div>
+
+    <div class="video">
+      <aside>
+        <video autoplay loop muted playsinline poster="images/ad.gif" controls>
+          <source src="images/ad.mp4" type="video/mp4">
+          Your browser does not support HTML5 video
+        </video>
+      </aside>
+    </div>
+  </div>
+
+
+  <footer>
+    <div id="footer-container"></div>
+  </footer>
+</body>
+
+<!-- Due to the need of loading the page before running the scripts, the are in here -->
+<footer>
+  <script src="scripts/slideshow.js"></script>
+  <script src="scripts/pageLoader.js"></script>
+  <script src="scripts/loadHeaderFooter.js"></script>
+  <script src="scripts/loadSlideshow.js"></script>
+</footer>
+
+</html>

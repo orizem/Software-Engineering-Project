@@ -1,0 +1,11 @@
+span .error {
+  all: initial;
+  font-size: 1.5rem;
+  background-color: #ece8da;
+  border-radius: 10px;
+  padding: 5px;
+  border: solid red 2px;
+  color: red;
+  display: flex;
+  margin-top: 10px;
+}
