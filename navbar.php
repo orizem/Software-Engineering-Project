@@ -10,7 +10,7 @@
         <div id="navId">
           <li><button class="btn"><a href="../index.html">דף הבית</a></button></li>
           <li><button><a href="../menu.php">תפריט</a></button></li>
-          <li><button><a href="../delivery.html">הזמנות</a></button></li>
+          <li><button><a href="../delivery.php">הזמנות</a></button></li>
           <li><button><a href="../info.html">המסעדה שלנו</a></button></li>
           <li><button><a href="../contact.html">צור קשר</a></button></li>
           <?php 

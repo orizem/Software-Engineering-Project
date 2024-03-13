@@ -33,16 +33,29 @@
                     <?php
                         include "php/db.php";
 
+                        $dictionary = array(
+                            "ספיישלים" => "specials",
+                            "אסייתי" => "asian",
+                            "איטלקי" => "italian",
+                            "מאכלי ים" => "sea-food",
+                            "המבורגרים" => "burgers",
+                            "מרקים" => "soups",
+                            "קינוחים" => "dessert",
+                            "שתיה קלה" => "beverages",
+                            "יין" => "wine",
+                        );
+
                         $result_cuisine = getDistinctCuisines($conn);
 
                         // Check if there are rows returned
                         if ($result_cuisine->num_rows > 0) {
                             // Output data of each row
                             while ($row_cuisine = $result_cuisine->fetch_assoc()) {
+                                $cuisine = $row_cuisine["cuisine"];
                                 echo '<div class="card-cell">
                                         <div class="card-cell-title">
                                             <img class="card-icon" src="data:image/jpeg;base64,' . base64_encode($row_cuisine["img"]) . '" />
-                                            <div class="card-title">' . $row_cuisine["cuisine"] . '</div>
+                                            <div class="card-title" id="' . $dictionary[$cuisine] . '">' . $cuisine . '</div>
                                         </div>
                                         <div class="cell-content">';
 
