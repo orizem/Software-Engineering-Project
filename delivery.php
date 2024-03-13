@@ -12,6 +12,9 @@
 
         <title>Gourmet Haven</title>
     </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="scripts/delivery.js"></script>
 </head>
 
 <body class="color-palette">
@@ -30,7 +33,8 @@
                         <tr>
                             <td>סוג ההזמנה:</td>
                             <td>
-                                <select>
+                                <select id="order">
+                                    <option value="" disabled selected hidden>בחר</option>
                                     <option value="order-table">הזמנת שולחן</option>
                                     <option value="order-delivery">הזמנת משלוח</option>
                                 </select>
@@ -43,22 +47,24 @@
                             
                             echo '<tr>';
                             echo '<td>שם:</td>';
-                            echo '<td><input type="text" id="firstName" name="name" value="' . $_SESSION["fname"] . ' ' . $_SESSION["lname"] . '" oninput="validateForm()" required><br></td>';
+                            echo '<td><input type="text" id="firstName" name="name" value="' . $_SESSION["fname"] . ' ' . $_SESSION["lname"] . '" oninput="validateForm()" required></td>';
                             echo '<td><span id="firstNameError" class="error"></span></td>';
                             echo '</tr>';
                             echo '<tr>';
                             echo '<td>טלפון:</td>';
-                            echo '<td><input type="tel" id="phoneNumber" name="tel" value="' . $_SESSION["phone"] . '" oninput="validateForm()" required><br></td>';
+                            echo '<td><input type="tel" id="phoneNumber" name="tel" value="' . $_SESSION["phone"] . '" oninput="validateForm()" required></td>';
                             echo '<td><span id="phoneNumberError" class="error"></span></td>';
                             echo '</tr>';
                             echo '<tr>';
                             echo '<td>מייל:</td>';
-                            echo '<td><input type="email" id="email" name="email" value="' . $_SESSION["email"] . '" oninput="validateForm()" required><br><br></td>';
+                            echo '<td><input type="email" id="email" name="email" value="' . $_SESSION["email"] . '" oninput="validateForm()" required></td>';
                             echo '<td><span id="emailError" class="error"></span></td>';
                             echo '</tr>';
                         ?>
-
-                        <tr>
+                    </table>
+                    <table id="result"></table>
+                    <table>
+                        <tr>                           
                             <!-- TODO: If delivery was selected: -->
                             <td>מה תרצו להזמין?</td>
                             <td>

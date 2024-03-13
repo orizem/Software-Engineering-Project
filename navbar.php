@@ -42,19 +42,11 @@
               באחד הדפים חייב להיות טופס, אשר שליחתו תהיה למייל שלכם. בטופס חייבים להיות לפחות 3 פקדי
               input ואת כל סוגי הפקדים ממצגת 1 שקופיות 91-100:
             </p>
-            <ol title="Delivery">select</ol>
-            <ol class="added">button</ol>
-            <ol title="Register" class="added">password</ol>
-            <ol title="Register" class="added">email</ol>
             <ol>url</ol>
-            <ol title="Register" class="added">tel</ol>
-            <ol title="Delivery">number</ol>
             <ol title="Delivery">range</ol>
             <ol>color</ol>
-            <ol title="Register" class="added">date</ol>
             <ol>time</ol>
             <ol title="Delivery">datetime</ol>
-            <ol title="Delivery">text area</ol>
             <ol title="Delivery">file upload</ol>
             <ol title="Delivery">date list</ol>
           </li><br>
