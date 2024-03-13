@@ -1,4 +1,6 @@
 <?php
+    include "cart.php";
+
     // Check if the 'order' parameter is set
     if (isset($_GET['order'])) {
         $order = $_GET['order'];
@@ -25,6 +27,7 @@
             ';
 
         } elseif ($order == 'order-delivery') {
+            getCart();
             echo '
                 <tr>
                     <td>הערות:</td>

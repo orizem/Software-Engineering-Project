@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="styles/style.css" />
     <link rel="stylesheet" href="styles/delivery.css" />
     <link rel="stylesheet" href="styles/register.css" />
+    <link rel="stylesheet" href="styles/cart.css" />
     <link rel="stylesheet" href="styles/background_animation.css" />
     <div class="color-palette">
         <div id="navbar-container"></div>
@@ -64,7 +65,7 @@
                             ';
                         ?>
                     </table>
-                    <table id="result"></table>
+                    <table id="product"></table>
                     <table>
                         <tr>                           
                             <!-- TODO: If delivery was selected: -->
@@ -73,15 +74,12 @@
                                 <div class="link-list dropdown">
                                     <span style="padding-top:3%; padding-bottom:3%;">לעיון בתפריט</span>
                                     <div class="dropdown-content" style="width: 50%;">
-                                        <a href="/menu.php#specials">ספיישלים</a>
-                                        <a href="/menu.php#asian">אסייתי</a>
-                                        <a href="/menu.php#italian">איטלקי</a>
-                                        <a href="/menu.php#sea-food">מאכלי ים</a>
-                                        <a href="/menu.php#burgers">המבורגרים</a>
-                                        <a href="/menu.php#soups">מרקים</a>
-                                        <a href="/menu.php#dessert">קינוחים</a>
-                                        <a href="/menu.php#beverages">שתיה קלה</a>
-                                        <a href="/menu.php#wine">יין</a>
+                                        <?php 
+                                        include "php/menuConfig.php";
+                                            foreach ($cuisine_dictionary as $key => $value) {
+                                                echo '<a href="/menu.php#' . $value . '">' . $key . '</a>';
+                                            }
+                                        ?>
                                     </div>
                                 </div>
 

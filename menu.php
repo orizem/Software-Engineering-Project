@@ -89,6 +89,7 @@
                                                         <input type="submit" name="btn" class="button" value="עדכן עגלה" />
                                                         <input type="number" name="amount" value="0" min="0" max="10" />
                                                         <input type="text" name="name" value="' . $row["name"] . '" hidden />
+                                                        <input type="number" name="price" value="' . $row["price"] . '" hidden />
                                                     </form>
                                                 </div>';
                                         echo $res;

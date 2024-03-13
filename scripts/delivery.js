@@ -7,7 +7,7 @@ $(document).ready(function () {
       data: { order: selectedOrder },
       success: function (response) {
         // Update the content of the div with the response
-        $("#result").html(response);
+        $("#product").html(response);
       },
     });
   });
