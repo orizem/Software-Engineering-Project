@@ -32,7 +32,11 @@
                 <div class="card">                         
                     <?php
                         include "php/db.php";
-                        include "php/menuConfig.php";                        
+                        include "php/menuConfig.php";
+                        
+                        session_start();
+                        $test = json_encode($_SESSION["cart"], JSON_UNESCAPED_UNICODE);
+                        echo '<div style="background-color:red; padding-top:20px; padding-bottom: 20px;"><p>עגלה:</p><div>'.$test.'</div></div>';
 
                         $result_cuisine = getDistinctCuisines($conn);
 
@@ -81,6 +85,11 @@
                                                         <p class="food-price">' . $row["price"] . '</p>
                                                         <p style="padding-left: 5px;">₪</p>
                                                     </div>
+                                                    <form action="php/shoppingCart.php" method="POST">
+                                                        <input type="submit" name="btn" class="button" value="עדכן עגלה" />
+                                                        <input type="number" name="amount" value="0" min="0" max="10" />
+                                                        <input type="text" name="name" value="' . $row["name"] . '" hidden />
+                                                    </form>
                                                 </div>';
                                         echo $res;
                                     }

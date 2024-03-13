@@ -67,5 +67,4 @@
       </span>
     </span>
   </div>
-  <script src="../scripts/loginOrRegister.js"></script>
 </body>
