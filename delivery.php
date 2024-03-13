@@ -45,21 +45,23 @@
                             // Initialize the session
                             session_start();
                             
-                            echo '<tr>';
-                            echo '<td>שם:</td>';
-                            echo '<td><input type="text" id="firstName" name="name" value="' . $_SESSION["fname"] . ' ' . $_SESSION["lname"] . '" oninput="validateForm()" required></td>';
-                            echo '<td><span id="firstNameError" class="error"></span></td>';
-                            echo '</tr>';
-                            echo '<tr>';
-                            echo '<td>טלפון:</td>';
-                            echo '<td><input type="tel" id="phoneNumber" name="tel" value="' . $_SESSION["phone"] . '" oninput="validateForm()" required></td>';
-                            echo '<td><span id="phoneNumberError" class="error"></span></td>';
-                            echo '</tr>';
-                            echo '<tr>';
-                            echo '<td>מייל:</td>';
-                            echo '<td><input type="email" id="email" name="email" value="' . $_SESSION["email"] . '" oninput="validateForm()" required></td>';
-                            echo '<td><span id="emailError" class="error"></span></td>';
-                            echo '</tr>';
+                            echo '
+                                <tr>
+                                    <td>שם:</td>
+                                    <td><input type="text" id="firstName" name="name" value="' . $_SESSION["fname"] . ' ' . $_SESSION["lname"] . '" oninput="validateForm()" required></td>
+                                    <td><span id="firstNameError" class="error"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>טלפון:</td>
+                                    <td><input type="tel" id="phoneNumber" name="tel" value="' . $_SESSION["phone"] . '" oninput="validateForm()" required></td>
+                                    <td><span id="phoneNumberError" class="error"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>מייל:</td>
+                                    <td><input type="email" id="email" name="email" value="' . $_SESSION["email"] . '" oninput="validateForm()" required></td>
+                                    <td><span id="emailError" class="error"></span></td>
+                                </tr>
+                            ';
                         ?>
                     </table>
                     <table id="result"></table>

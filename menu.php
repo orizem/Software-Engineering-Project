@@ -32,18 +32,7 @@
                 <div class="card">                         
                     <?php
                         include "php/db.php";
-
-                        $dictionary = array(
-                            "ספיישלים" => "specials",
-                            "אסייתי" => "asian",
-                            "איטלקי" => "italian",
-                            "מאכלי ים" => "sea-food",
-                            "המבורגרים" => "burgers",
-                            "מרקים" => "soups",
-                            "קינוחים" => "dessert",
-                            "שתיה קלה" => "beverages",
-                            "יין" => "wine",
-                        );
+                        include "php/menuConfig.php";                        
 
                         $result_cuisine = getDistinctCuisines($conn);
 
@@ -52,10 +41,26 @@
                             // Output data of each row
                             while ($row_cuisine = $result_cuisine->fetch_assoc()) {
                                 $cuisine = $row_cuisine["cuisine"];
+                                $links = '';
+                                if (array_key_exists($cuisine, $cuisine_links_dictionary)) {
+                                    $data = $cuisine_links_dictionary[$cuisine];
+                                    $links = '
+                                        <div class="link-list dropdown">
+                                            <span style="padding-top:3%; padding-bottom:3%; z-index:100;">מידע נוסף</span>
+                                            <div class="dropdown-content" style="width: 50%;">
+                                                <a href="' . $data["link-1"]["url"] . '" target="_blank" rel="noopener noreferrer">' . $data["link-1"]["name"] . '</a>
+                                                <a href="' . $data["link-2"]["url"] . '" target="_blank" rel="noopener noreferrer">' . $data["link-2"]["name"] . '</a>
+                                                <a href="' . $data["link-3"]["url"] . '" target="_blank" rel="noopener noreferrer">' . $data["link-3"]["name"] . '</a>
+                                            </div>
+                                        </div>
+                                    ';
+                                }
+
                                 echo '<div class="card-cell">
                                         <div class="card-cell-title">
                                             <img class="card-icon" src="data:image/jpeg;base64,' . base64_encode($row_cuisine["img"]) . '" />
-                                            <div class="card-title" id="' . $dictionary[$cuisine] . '">' . $cuisine . '</div>
+                                            '. $links .'
+                                            <div class="card-title" id="' . $cuisine_dictionary[$cuisine] . '">' . $cuisine . '</div>
                                         </div>
                                         <div class="cell-content">';
 

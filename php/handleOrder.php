@@ -4,31 +4,34 @@
         $order = $_GET['order'];
 
         // Process the order and prepare the response
-        // This is a simple example. You might want to fetch data from a database or perform other operations.
         if ($order == 'order-table') {
-            echo '<tr>';
-            echo '    <td>כמה תהיו:</td>';
-            echo '    <td><input type="number" id="numPeople" name="numPeople" value="1" required></td>';
-            echo '    <td></td>';
-            echo '</tr>';
-            echo '<tr>';
-            echo '    <td>איפה תשבו:</td>';
-            echo '    <td>';
-            echo '        <select id="location-sit">';
-            echo '            <option value="" disabled selected hidden>בחר</option>';
-            echo '            <option value="location-sit-in">בפנים</option>';
-            echo '            <option value="location-sit-out">בחוץ</option>';
-            echo '        </select>';
-            echo '    </td>';
-            echo '    <td></td>';
-            echo '</tr>';
+            echo '
+                <tr>
+                    <td>כמה תהיו:</td>
+                    <td><input type="number" id="numPeople" name="numPeople" value="1" min="1" max="10" required></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>איפה תשבו:</td>
+                    <td>
+                        <select id="location-sit">
+                            <option value="" disabled selected hidden>בחר</option>
+                            <option value="location-sit-in">בפנים</option>
+                            <option value="location-sit-out">בחוץ</option>
+                        </select>
+                    </td>
+                    <td></td>
+                </tr>
+            ';
 
         } elseif ($order == 'order-delivery') {
-            echo '<tr>';
-            echo '    <td>הערות:</td>';
-            echo '    <td><textarea id="notes" cols="30" rows="3" name="notes"></textarea></td>';
-            echo '    <td></td>';
-            echo '</tr>';
+            echo '
+                <tr>
+                    <td>הערות:</td>
+                    <td><textarea id="notes" cols="40" rows="4" name="notes"></textarea></td>
+                    <td></td>
+                </tr>
+            ';
         } else {
             echo "Invalid selection.";
         }
