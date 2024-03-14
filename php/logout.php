@@ -8,6 +8,7 @@
     $_SESSION["lname"] = null; 
     $_SESSION["phone"] = null; 
     $_SESSION["address"] = null; 
+    $_SESSION["cart"] = array();
 
     header("Location: ../index.html", true, 301);
     exit();

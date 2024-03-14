@@ -123,6 +123,6 @@
 
 <script src="scripts/pageLoader.js"></script>
 <script src="scripts/loadHeaderFooter.js"></script>
-<script src="../scripts/cart.js"></script>
+<script src="scripts/cart.js"></script>
 
 </html>
