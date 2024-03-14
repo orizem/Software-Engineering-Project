@@ -4,6 +4,7 @@ function resetErrors() {
     "firstName",
     "lastName",
     "phoneNumber",
+    "address",
     "email",
     "password",
     "birthDate",
@@ -70,6 +71,19 @@ function validateForm() {
       );
     }
   } catch {}
+
+  // Validate address number (10 digits)
+  // try {
+  //   var address = document.getElementById("address").value;
+  //   var addressRegex = /^[0-9]{10}$/;
+  //   if (!addressRegex.test(address) || address.length != 10) {
+  //     return testValidation(
+  //       address,
+  //       (id = "addressError"),
+  //       (message = "Enter a valid address")
+  //     );
+  //   }
+  // } catch {}
 
   // Validate email
   try {

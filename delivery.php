@@ -58,6 +58,11 @@
                                     <td><span id="phoneNumberError" class="error"></span></td>
                                 </tr>
                                 <tr>
+                                    <td>כתובת:</td>
+                                    <td><input type="text" id="address" name="address" value="' . $_SESSION["address"] . '" required></td>
+                                    <td><span id="addressError" class="error"></span></td>
+                                </tr>
+                                <tr>
                                     <td>מייל:</td>
                                     <td><input type="email" id="email" name="email" value="' . $_SESSION["email"] . '" oninput="validateForm()" required></td>
                                     <td><span id="emailError" class="error"></span></td>

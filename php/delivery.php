@@ -30,10 +30,10 @@
                                 <?php 
                                     session_start();
                                     
-                                    $text = array("הזמנה על שם", "נשלחה למערכת.", "ניצור עמך קשר באמצעות");
-                                    $values = array(" " . $_GET["name"] . " ", " ", " " . $_GET["email"] . " או " . $_GET["tel"]);
+                                    $text = array("הזמנה על שם", "לכתובת", "נשלחה למערכת.", "ניצור עמך קשר באמצעות");
+                                    $values = array(" " . $_GET["name"] . " ", " " . $_GET["address"] . " ", " ", " " . $_GET["email"] . " או " . $_GET["tel"]);
                                     $res = "";
-                                    for ($counter = 0; $counter <= 2; $counter++) {
+                                    for ($counter = 0; $counter <= 3; $counter++) {
                                         $res = $res . $text[$counter] . $values[$counter];
                                     }
                                     echo $res;

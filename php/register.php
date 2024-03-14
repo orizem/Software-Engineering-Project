@@ -11,6 +11,7 @@
         $email = $_POST["email"];
         $password = $_POST["password"];
         $phone = $_POST["phone"];
+        $address = $_POST["address"];
         $date = $_POST["date"];
 
         $sql = "SELECT * FROM users WHERE email = '$email'";
@@ -24,7 +25,7 @@
         }
 
         // Insert user data into the database
-        $sql = "INSERT INTO users (fname, lname, email, password, phone, birth_day) VALUES ('$fname', '$lname', '$email', '$password', '$phone', '$date')";
+        $sql = "INSERT INTO users (fname, lname, email, password, phone, birth_day, address) VALUES ('$fname', '$lname', '$email', '$password', '$phone', '$date', '$address')";
 
         if ($conn->query($sql) === TRUE) {
             header("Location: ../index.html", true, 301);

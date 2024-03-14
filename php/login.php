@@ -30,6 +30,7 @@
             $_SESSION["fname"] = $row["fname"]; 
             $_SESSION["lname"] = $row["lname"]; 
             $_SESSION["phone"] = $row["phone"]; 
+            $_SESSION["address"] = $row["address"]; 
             
             header("Location: ../index.html", true, 301);
             exit();
