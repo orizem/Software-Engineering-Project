@@ -35,13 +35,15 @@
                         include "php/menuConfig.php";
                         
                         session_start();
-                        $test = json_encode($_SESSION["cart"], JSON_UNESCAPED_UNICODE);
-                        echo '<div style="background-color:red; padding-top:20px; padding-bottom: 20px;"><p>עגלה:</p><div>'.$test.'</div></div>';
-
+                        $cart = json_encode($_SESSION["cart"], JSON_UNESCAPED_UNICODE);
+                        echo '<div style="background-color:red; padding-top:20px; padding-bottom: 20px;"><p>עגלה:</p><div>'.$cart.'</div></div>';
+                        
                         $result_cuisine = getDistinctCuisines($conn);
-
+                        
                         // Check if there are rows returned
                         if ($result_cuisine->num_rows > 0) {
+                            $idx = 0;
+
                             // Output data of each row
                             while ($row_cuisine = $result_cuisine->fetch_assoc()) {
                                 $cuisine = $row_cuisine["cuisine"];
@@ -74,7 +76,13 @@
                                 if ($result->num_rows > 0) {
                                     // Output data of each row in separate <div>
                                     while ($row = $result->fetch_assoc()) {
-                                        $res = '<div class="food">
+                                        if (isset($_SESSION['cart'][$row["name"]]['amount'])) {
+                                            $amountVal = $_SESSION['cart'][$row["name"]]['amount'];
+                                        } else {
+                                            $amountVal = 0;
+                                        }
+
+                                        $res = '<div class="food" id="food-' . $idx . '">
                                                     <p class="food-title">' . $row["name"] . '</p>
                                                     <img class="food-img" src="data:image/jpeg;base64,' . base64_encode($row["img"]) . '" style="width:20rem; border-radius: 10%;">
 
@@ -85,14 +93,15 @@
                                                         <p class="food-price">' . $row["price"] . '</p>
                                                         <p style="padding-left: 5px;">₪</p>
                                                     </div>
-                                                    <form action="php/shoppingCart.php" method="POST">
+                                                    <form class="shoppingCartForm" id="cart-' . $idx . '" action="php/shoppingCart.php" method="POST">
                                                         <input type="submit" name="btn" class="button" value="עדכן עגלה" />
-                                                        <input type="number" name="amount" value="0" min="0" max="10" />
+                                                        <input type="number" name="amount" value="' . $amountVal . '" min="0" max="10" />
                                                         <input type="text" name="name" value="' . $row["name"] . '" hidden />
                                                         <input type="number" name="price" value="' . $row["price"] . '" hidden />
                                                     </form>
                                                 </div>';
                                         echo $res;
+                                        $idx++;
                                     }
                                 }
                                 echo "</div></div>";
@@ -114,5 +123,6 @@
 
 <script src="scripts/pageLoader.js"></script>
 <script src="scripts/loadHeaderFooter.js"></script>
+<script src="../scripts/cart.js"></script>
 
 </html>

@@ -34,7 +34,7 @@
 
     // Get food table
     function getAllItemsInCuisine($conn, $cuisine) {
-        $sql = "SELECT name, description, ingredients, price, img FROM food WHERE cuisine = '" . $cuisine . "';";
+        $sql = "SELECT id, name, description, ingredients, price, img FROM food WHERE cuisine = '" . $cuisine . "';";
         $result = $conn->query($sql);
 
         // Check if the query was successful
