@@ -36,6 +36,10 @@
                                     for ($counter = 0; $counter <= 3; $counter++) {
                                         $res = $res . $text[$counter] . $values[$counter];
                                     }
+
+                                    if (strlen($_GET["notes"]) > 0){
+                                        $res = $res . "\nהערותיך נרשמו: " . $_GET["notes"];
+                                    }
                                     echo $res;
                                 ?>
                             </h3>
@@ -45,8 +49,14 @@
                         <td>
                             <h3>
                                 <?php 
+                                    include "postDelivery.php";
+                                    
+                                    $cart = json_encode($_SESSION["cart"], JSON_UNESCAPED_UNICODE);
                                     echo 'פרטי ההזמנה:
-                                    ' . json_encode($_SESSION["cart"], JSON_UNESCAPED_UNICODE); ?>
+                                    ' . $cart; 
+                                    
+                                    postDelivery($_GET["name"], $_GET["address"], $_GET["email"], $_GET["tel"], $cart, $_GET["notes"]);
+                                ?>
                             </h3>
                         </td>
                     </tr>

@@ -6,7 +6,7 @@
         $order = $_GET['order'];
 
         // Process the order and prepare the response
-        if ($order == 'order-table') {
+        if ($order === 'order-table') {
             echo '
                 <tr>
                     <td>כמה תהיו:</td>
@@ -26,15 +26,8 @@
                 </tr>
             ';
 
-        } elseif ($order == 'order-delivery') {
+        } elseif ($order === 'order-delivery') {
             getCart();
-            echo '
-                <tr>
-                    <td>הערות:</td>
-                    <td><textarea id="notes" cols="40" rows="4" name="notes"></textarea></td>
-                    <td></td>
-                </tr>
-            ';
         } else {
             echo "Invalid selection.";
         }

@@ -10,13 +10,13 @@
         $_SESSION["cart"] = array_merge($_SESSION["cart"], array($name => array("amount" => $amount, "price" => $price)));
 
         // Remove
-        if ($amount == 0) {
+        if ($amount === 0) {
             unset($_SESSION["cart"][$name]);
         }
     }
 
     // Handle form submission
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $amount = intval($_POST["amount"]);
         $name =  $_POST["name"];
         $price = intval($_POST["price"]);

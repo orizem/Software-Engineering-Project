@@ -5,7 +5,7 @@
     session_start();
 
     // Handle form submission
-    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $fname = $_POST["fname"];
         $lname = $_POST["lname"];
         $email = $_POST["email"];

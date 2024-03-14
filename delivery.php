@@ -67,6 +67,11 @@
                                     <td><input type="email" id="email" name="email" value="' . $_SESSION["email"] . '" oninput="validateForm()" required></td>
                                     <td><span id="emailError" class="error"></span></td>
                                 </tr>
+                                <tr>
+                                    <td>הערות:</td>
+                                    <td><textarea id="notes" cols="40" rows="4" name="notes" max="250"></textarea></td>
+                                    <td></td>
+                                </tr>                                
                             ';
                         ?>
                     </table>
