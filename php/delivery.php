@@ -28,6 +28,8 @@
                         <td>
                             <h3>
                                 <?php 
+                                    session_start();
+                                    
                                     $text = array("הזמנה על שם", "נשלחה למערכת.", "ניצור עמך קשר באמצעות");
                                     $values = array(" " . $_GET["name"] . " ", " ", " " . $_GET["email"] . " או " . $_GET["tel"]);
                                     $res = "";
@@ -43,9 +45,8 @@
                         <td>
                             <h3>
                                 <?php 
-                                    $text = array("פרטי ההזמנה");
-                                    $res = $text[0];
-                                    echo $res; ?>
+                                    echo 'פרטי ההזמנה:
+                                    ' . json_encode($_SESSION["cart"], JSON_UNESCAPED_UNICODE); ?>
                             </h3>
                         </td>
                     </tr>
