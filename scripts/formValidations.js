@@ -72,19 +72,6 @@ function validateForm() {
     }
   } catch {}
 
-  // Validate address number (10 digits)
-  // try {
-  //   var address = document.getElementById("address").value;
-  //   var addressRegex = /^[0-9]{10}$/;
-  //   if (!addressRegex.test(address) || address.length != 10) {
-  //     return testValidation(
-  //       address,
-  //       (id = "addressError"),
-  //       (message = "Enter a valid address")
-  //     );
-  //   }
-  // } catch {}
-
   // Validate email
   try {
     var email = document.getElementById("email").value;
@@ -95,6 +82,14 @@ function validateForm() {
         (id = "emailError"),
         (message = "Enter a valid email address")
       );
+    } else {
+      let reEmail = "";
+      while (reEmail !== email) {
+        reEmail = window.prompt(
+          "Please re-enter you email.",
+          "Enter Email Here"
+        );
+      }
     }
   } catch {}
 
@@ -150,3 +145,9 @@ document
       alert("Please fill in all required fields with valid data.");
     }
   });
+
+$(document).ready(function () {
+  $("#registrationForm").change(function () {
+    alert("aaa");
+  });
+});

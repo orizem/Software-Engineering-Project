@@ -34,7 +34,7 @@
                         <tr>
                             <td>סוג ההזמנה:</td>
                             <td>
-                                <select id="order">
+                                <select id="order" name="order">
                                     <option value="" disabled selected hidden>בחר</option>
                                     <option value="order-table">הזמנת שולחן</option>
                                     <option value="order-delivery">הזמנת משלוח</option>
@@ -78,7 +78,6 @@
                     <table id="product"></table>
                     <table>
                         <tr>                           
-                            <!-- TODO: If delivery was selected: -->
                             <td>מה תרצו להזמין?</td>
                             <td>
                                 <div class="link-list dropdown">
@@ -104,7 +103,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td><input type="submit" id="submitButton" value="שלח"></td>
+                            <td><input type="submit" id="submitButton" onclick="acceptOrder()" value="שלח"></td>
                         </tr>
                     </table>
                 </form>

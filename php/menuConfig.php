@@ -12,20 +12,6 @@
     );
 
     $cuisine_links_dictionary = array(
-        // "ספיישלים" => array(
-        //     "link-1" => array(
-        //         "url" => "",
-        //         "name" => "",
-        //     ),
-        //     "link-2" => array(
-        //         "url" => "",
-        //         "name" => "",
-        //     ),
-        //     "link-3" => array(
-        //         "url" => "",
-        //         "name" => "",
-        //     ),
-        // ),
         "אסייתי" => array(
             "link-1" => array(
                 "url" => "https://eatforlonger.com/overview-of-asian-cuisine/",
@@ -54,20 +40,6 @@
                 "name" => "Italian Food",
             ),
         ),
-        // "מאכלי ים" => array(
-        //     "link-1" => array(
-        //         "url" => "",
-        //         "name" => "",
-        //     ),
-        //     "link-2" => array(
-        //         "url" => "",
-        //         "name" => "",
-        //     ),
-        //     "link-3" => array(
-        //         "url" => "",
-        //         "name" => "",
-        //     ),
-        // ),
         "המבורגרים" => array(
             "link-1" => array(
                 "url" => "https://en.wikipedia.org/wiki/History_of_the_hamburger",
@@ -82,48 +54,6 @@
                 "name" => "History Of Ground Beef",
             ),
         ),
-        // "מרקים" => array(
-        //     "link-1" => array(
-        //         "url" => "",
-        //         "name" => "",
-        //     ),
-        //     "link-2" => array(
-        //         "url" => "",
-        //         "name" => "",
-        //     ),
-        //     "link-3" => array(
-        //         "url" => "",
-        //         "name" => "",
-        //     ),
-        // ),
-        // "קינוחים" => array(
-        //     "link-1" => array(
-        //         "url" => "",
-        //         "name" => "",
-        //     ),
-        //     "link-2" => array(
-        //         "url" => "",
-        //         "name" => "",
-        //     ),
-        //     "link-3" => array(
-        //         "url" => "",
-        //         "name" => "",
-        //     ),
-        // ),
-        // "שתיה קלה" => array(
-        //     "link-1" => array(
-        //         "url" => "",
-        //         "name" => "",
-        //     ),
-        //     "link-2" => array(
-        //         "url" => "",
-        //         "name" => "",
-        //     ),
-        //     "link-3" => array(
-        //         "url" => "",
-        //         "name" => "",
-        //     ),
-        // ),
         "יין" => array(
             "link-1" => array(
                 "url" => "https://en.wikipedia.org/wiki/History_of_wine",

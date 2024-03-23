@@ -11,6 +11,8 @@
 
         <title>Gourmet Haven</title>
     </div>
+
+    <script>const test = window.prompt( "Please enter your name", "Test" );</script>
 </head>
 
 <body class="color-palette">
@@ -52,10 +54,24 @@
                                     include "postDelivery.php";
                                     
                                     $cart = json_encode($_SESSION["cart"], JSON_UNESCAPED_UNICODE);
-                                    echo 'פרטי ההזמנה:
-                                    ' . $cart; 
+                                    echo "פרטי ההזמנה:" . $cart; 
                                     
-                                    postDelivery($_GET["name"], $_GET["address"], $_GET["email"], $_GET["tel"], $cart, $_GET["notes"]);
+                                    postDelivery($_GET["order"], $_GET["name"], $_GET["address"], $_GET["email"], $_GET["tel"], $cart, $_GET["numPeople"],  $_GET["location-sit"], $_GET["notes"]);
+
+                                    // Send
+                                    $to = "ori.zemach@gmail.com";
+                                    $subject = "New Order";
+                                    
+                                    $message = "Name: " . $_GET["name"] . "<br>Address: " . $_GET["address"] . "<br>Email: " . $_GET["email"] . "<br>Phone: " . $_GET["tel"];
+                                    if ($_GET["order"] === "order-delivery") {
+                                        $message = $message . "<br>Cart: " . $cart;
+                                    }
+                                    else {
+                                        $message = $message . "<br>Number of people: " . $_GET["numPeople"] . "<br>Location: " . $_GET["location-sit"];
+                                    }
+                                    $message = $message . "<br>Notes: " . $_GET["notes"];
+
+                                    mail($to, $subject, $message);
                                 ?>
                             </h3>
                         </td>

@@ -6,9 +6,13 @@ $(document).ready(function () {
       type: "get",
       data: { order: selectedOrder },
       success: function (response) {
-        // Update the content of the div with the response
+        document.write("Success handle order.");
         $("#product").html(response);
       },
     });
   });
 });
+
+function acceptOrder() {
+  window.alert("Order Sent");
+}

@@ -31,40 +31,4 @@
       </ul>
     </div>
   </div>
-  <!-- TODO: Remove the entire div below -->
-  <div class="index-div container content">
-    <span class="box content" style="background-color: rgba(24, 41, 49, 0.4);">
-      <span style="background-color: red; color:yellow;width:85%;">
-        <ul>
-          &#9888;:TODO:&#9888;
-          <li>
-            <p>
-              באחד הדפים חייב להיות טופס, אשר שליחתו תהיה למייל שלכם. בטופס חייבים להיות לפחות 3 פקדי
-              input ואת כל סוגי הפקדים ממצגת 1 שקופיות 91-100:
-            </p>
-            <ol>url</ol>
-            <ol title="Delivery">range</ol>
-            <ol>color</ol>
-            <ol>time</ol>
-            <ol title="Delivery">datetime</ol>
-            <ol title="Delivery">file upload</ol>
-            <ol title="Delivery">date list</ol>
-          </li><br>
-          <li>
-            <p>
-              חייב להשתמש באתר בכל סוגי הפלט כפי שהם
-              מוצגים ב מצגת 1 שקופית 146:
-            </p>
-            <ol>כתיבה לתיבת התראה ()window.alert</ol>
-            <ol>כתיבה לפלט של document.write() HTML</ol>
-            <ol class="added">כתיבה לאלמנט של HTML שימוש ב innerHTML</ol>
-          </li><br>
-          <li>חייב להשתמש פעם אחת לפחות באינטראקציה עם המשתמש (מצגת 1 שקופית 161) - window.prompt</li><br>
-          <li>שימוש במערך פעם אחת לפחות ובמחרוזת פעם אחת לפחות</li><br>
-          <li></li><br>
-          <li></li>
-        </ul>
-      </span>
-    </span>
-  </div>
 </body>

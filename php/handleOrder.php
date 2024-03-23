@@ -16,10 +16,10 @@
                 <tr>
                     <td>איפה תשבו:</td>
                     <td>
-                        <select id="location-sit">
+                        <select id="location-sit" name="location-sit">
                             <option value="" disabled selected hidden>בחר</option>
-                            <option value="location-sit-in">בפנים</option>
-                            <option value="location-sit-out">בחוץ</option>
+                            <option value="בפנים">בפנים</option>
+                            <option value="בחוץ">בחוץ</option>
                         </select>
                     </td>
                     <td></td>

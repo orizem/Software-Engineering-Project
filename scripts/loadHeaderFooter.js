@@ -1,10 +1,5 @@
 const pages = ["navbar", "footer"];
 
-// /* Load Pages */
-// pages.forEach((page) => {
-//   loadFile(page, "html");
-// });
-
 /* Load Header */
 loadFile(pages[0], "php");
 
